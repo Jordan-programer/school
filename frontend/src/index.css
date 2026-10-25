@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --papel: #F4EFE6;
+  --superficie: #FBF8F2;
+  --linha: #E2D9C8;
+  --tinta: #1F2A24;
+  --tinta-suave: #6B6558;
+  --mata: #2F5D50;
+  --mata-escura: #1F4338;
+  --barro: #B5532E;
+  --girassol: #D9A441;
+  --giz: #3D6A8A;
+  --folha: #4C7A3F;
+  --tijolo: #A83232;
+}
+
+.dark {
+  --papel: #17201C;
+  --superficie: #1F2A24;
+  --linha: #2C3A32;
+  --tinta: #EDE7DA;
+  --tinta-suave: #A39B8B;
+  --mata: #3D7364;
+  --mata-escura: #162620;
+  --barro: #C9613A;
+  --girassol: #E5B24E;
+  --giz: #4D7E9F;
+  --folha: #5E934F;
+  --tijolo: #BF3E3E;
+}
+
+@layer base {
+  body {
+    background-color: var(--papel);
+    color: var(--tinta);
+    font-family: 'Public Sans', -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    letter-spacing: -0.015em;
+  }
+
+  /* Números de notas, códigos e quantias monetárias em Kz */
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Foco visível e acessível sem anéis gigantes */
+:focus-visible {
+  outline: 2px solid var(--mata);
+  outline-offset: 1px;
+}
+
+/* Estilo de tabelas do caderno escolar */
+.escola-table th {
+  background-color: var(--papel);
+  color: var(--tinta-suave);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-bottom: 1px solid var(--linha);
+  padding: 10px 14px;
+}
+
+.escola-table td {
+  border-bottom: 1px solid var(--linha);
+  padding: 10px 14px;
+  vertical-align: middle;
+}
+
+.escola-table tr:nth-child(even) td {
+  background-color: rgba(31, 42, 36, 0.015);
+}
